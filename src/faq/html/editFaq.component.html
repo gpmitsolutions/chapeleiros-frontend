@@ -1,0 +1,42 @@
+<div class="page-banner" style="padding:40px 0; background: center #f9f9f9;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+				<h2>Regras</h2>
+				<p>FAQ</p>
+            </div>
+            <div class="col-md-6">
+                <ul class="breadcrumbs">
+                    <li>Inicial</li>
+                    <li>Regras</li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h4 class="classic-title"><span>FAQ</span></h4>
+                <div class="form-group">
+                    <label [ngClass]="currentFaq.Question ? 'active' : ''" for="question">Pergunta</label>
+                    <input type="text" required value="" id="question" class="form-control" id="basic-url" aria-describedby="basic-addon3" [(ngModel)]="currentFaq.Question">                   
+                </div>
+                <div class="form-group">
+                    <label [ngClass]="currentFaq.Answer ? 'active' : ''" for="answer">Resposta</label>
+                    <textarea rows="7" type="text" required value="" id="email" class="form-control" id="basic-url" aria-describedby="basic-addon3" [(ngModel)]="currentFaq.Answer"></textarea>             
+                </div>
+                <div class="form-group">
+                    <label [ngClass]="currentFaq.priority ? 'active' : ''" for="priority">Prioridade</label>
+                    <input type="text" required value="" id="priority" class="form-control" id="basic-url" aria-describedby="basic-addon3" [(ngModel)]="currentFaq.priotity">                   
+                </div>                
+                <div class="input-field col s12">
+                    <a href="#" class="btn-system btn-small btn-black" (click)="saveNewFaq()">Enviar</a>  
+                    <a href="#" class="btn-system btn-small btn-black">Cancelar</a>                  
+                </div> 
+            </div>
+        </div>
+    </div>
+</div> 

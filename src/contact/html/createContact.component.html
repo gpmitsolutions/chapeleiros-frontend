@@ -1,0 +1,45 @@
+<div class="page-banner" style="padding:40px 0; background: center #f9f9f9;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+				<h2>Contato</h2>
+				<p>Enviar Mensagem</p>
+            </div>
+            <div class="col-md-6">
+                <ul class="breadcrumbs">
+                    <li>Inicial</li>
+                    <li>Contato</li>
+                    <li><a href="#">Envie sua Mensagem</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h4 class="classic-title"><span>Contato</span></h4>
+                <div class="form-group">
+                    <label [ngClass]="currentContact.Name ? 'active' : ''" for="name">Nome</label>
+                    <input type="text" required value="" id="name" class="form-control" id="basic-url" aria-describedby="basic-addon3" [(ngModel)]="currentContact.Name">                   
+                </div>
+                <div class="form-group">
+                    <label [ngClass]="currentContact.Email ? 'active' : ''" for="email">E-Mail</label>
+                    <input type="text" required value="" id="email" class="form-control" id="basic-url" aria-describedby="basic-addon3" [(ngModel)]="currentContact.Email">                   
+                </div>
+                <div class="form-group">
+                    <label [ngClass]="currentContact.Subject ? 'active' : ''" for="subject">Assunto</label>
+                    <input type="text" required value="" id="subject" class="form-control" id="basic-url" aria-describedby="basic-addon3" [(ngModel)]="currentContact.Subject">                   
+                </div>
+                <div class="form-group">
+                    <label [ngClass]="currentContact.Message ? 'active' : ''" for="message">Mensagem</label>
+                    <textarea rows="7" value="message" id="subject" class="form-control" id="basic-url" aria-describedby="basic-addon3" [(ngModel)]="currentContact.Message"></textarea>                  
+                </div>
+                <div class="input-field col s12">
+                    <a href="#" class="btn-system btn-small btn-black" (click)="saveNewContact()">Enviar</a>                   
+                </div> 
+            </div>
+        </div>
+    </div>
+</div> 

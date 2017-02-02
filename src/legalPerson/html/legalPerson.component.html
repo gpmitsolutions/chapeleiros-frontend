@@ -1,0 +1,94 @@
+<div class="page-banner" style="padding:40px 0; background: center #f9f9f9;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+				<h2>Cadastro</h2>
+				<p>Pessoa Jurídica</p>
+            </div>
+            <div class="col-md-6">
+                <ul class="breadcrumbs">
+                    <li>Inicial</li>
+                    <li>Cadastro</li>
+                    <li><a href="#">Pessoa Jurídica</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h4 class="classic-title"><span>Dados da Empresa</span></h4>
+                <div class="form-group">
+                    <label [ngClass]="currentLegalPerson.Name ? 'active' : ''" for="name">Nome</label>
+                    <input type="text" required value="" id="name" class="form-control" id="basic-url" aria-describedby="basic-addon3" [(ngModel)]="currentLegalPerson.Name">                   
+                </div>
+                <div class="form-group">
+                    <label [ngClass]="currentLegalPerson.Address ? 'active' : ''" for="address">Endereço</label>  
+                    <input type="text" id="address" class="form-control" id="basic-url" aria-describedby="basic-addon3" [(ngModel)]="currentLegalPerson.Address">                    
+                </div>
+                <div class="form-group">
+                    <label [ngClass]="currentLegalPerson.Number ? 'active' : ''" for="number">Número</label>
+                    <input type="number" id="number" class="form-control" id="basic-url" aria-describedby="basic-addon3" [(ngModel)]="currentLegalPerson.Number">            
+                </div>
+                <div class="form-group">
+                    <label [ngClass]="currentLegalPerson.Complement ? 'active' : ''" for="complement">Complemento</label>
+                    <input type="text" id="complement" class="form-control" id="basic-url" aria-describedby="basic-addon3" [(ngModel)]="currentLegalPerson.Complement">        
+                </div>
+                <div class="form-group">   
+                    <label [ngClass]="currentLegalPerson.State ? 'active' : ''" for="state">Estado</label> 
+                    <select id="state" class="form-control" #stateName name="stateID" (change)="onSelect($event.target.value)">
+                        <option value="default">Selecione um Estado</option>
+                        <option *ngFor='let state of states' value= '{{ state.id }}'>
+                            {{ state.stateName }}                    
+                        </option>               
+                    </select>  
+                </div>
+                <div class="form-group">   
+                    <label [ngClass]="currentLegalPerson.CityID ? 'active' : ''" for="city">Cidade</label>       
+                    <select id="city" class="form-control" #cityName name="cityID" [(ngModel)]="currentLegalPerson.CityID">                 
+                        <option value="default">Selecione uma Cidade</option>
+                        <option *ngFor='let city of cities' value= '{{ city.id }}'>
+                            {{ city.cityName }}
+                        </option>                
+                    </select>            
+                </div>
+                <div class="form-group">
+                    <label [ngClass]="currentLegalPerson.Phone ? 'active' : ''" for="phone">Telefone</label> 
+                    <input type="text" id="phone" class="form-control" aria-describedby="basic-addon3" [(ngModel)]="currentLegalPerson.Phone">        
+                </div>
+                <div class="form-group">
+                    <label [ngClass]="currentLegalPerson.CNPJ ? 'active' : ''" for="cnpj">CNPJ</label> 
+                    <input type="text" id="cnpj" class="form-control" aria-describedby="basic-addon3" [(ngModel)]="currentLegalPerson.CNPJ">      
+                </div>
+                <div class="form-group">
+                    <label [ngClass]="currentLegalPerson.ResponsableName ? 'active' : ''" for="responsableName">Status</label> 
+                    <input type="text" id="responsableName" class="form-control" aria-describedby="basic-addon3" [(ngModel)]="currentLegalPerson.ResponsableName">
+                </div> 
+                <div class="form-group">
+                    <label [ngClass]="currentLegalPerson.FieldOfBusinessID ? 'active' : ''" for="fieldOfBusinessID">Ramo de Atividade</label> 
+                    <input type="text" id="fieldOfBusiness" class="form-control" aria-describedby="basic-addon3" [(ngModel)]="currentLegalPerson.FieldOfBusinessID">
+                </div> 
+                <div class="input-field col s12">
+                    <a href="#" class="btn-system btn-small btn-black" (click)="save()">Salvar</a>
+                    <a href="#" class="btn-system btn-small border-btn btn-gray" (click)="cancel()">Cancelar</a>
+                </div> 
+            </div>
+            <div class="col-md-4">                      
+                <h4 class="classic-title"><span>Informações</span></h4>                      
+                <p>As informações de cadastro são de uso interno do Clube dos Chapeleiros e não serão divulgados para terceiros.</p>
+                <div class="hr1" style="margin-bottom:10px;"></div>
+                <ul class="icons-list">
+                    <li><i class="fa fa-envelope-o"></i> <strong>Email:</strong> <a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="82ebece4edc2fbedf7f0e1edeff2e3ecfbace1edef">[contato@clubedoschapeleiros.com.br]</a>
+                        <script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></li>
+                    <li><i class="fa fa-whatsapp"></i> <strong>WhatsApp:</strong> (41) 99999-9999</li>
+                </ul>
+                <div class="hr1" style="margin-bottom:15px;"></div>
+                <h4 class="classic-title"><span>Dúvidas</span></h4>
+		        <p>Em caso de dúvidas, consulte nossa Política de Privacidade.</p>
+            </div>
+        </div>
+    </div>
+</div>
+

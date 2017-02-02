@@ -1,0 +1,93 @@
+{
+  "project": {
+    "version": "1.0.0-beta.26",
+    "name": "chapeleiros-frontend-app"
+  },
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "dist",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.json",
+      "prefix": "app",
+      "mobile": false,
+      "styles": [        
+        "../node_modules/css/bootstrap.min.css",
+        "../node_modules/css/font-awesome.min.css",
+        "../node_modules/css/slicknav.css",
+        "../node_modules/css/responsive.css",
+        "../node_modules/css/animate.css",
+        "../node_modules/css/colors/red.css",
+        "../node_modules/css/colors/jade.css",
+        "../node_modules/css/colors/green.css",
+        "../node_modules/css/colors/blue.css",
+        "../node_modules/css/colors/beige.css",
+        "../node_modules/css/colors/cyan.css",
+        "../node_modules/css/colors/orange.css",
+        "../node_modules/css/colors/peach.css",
+        "../node_modules/css/colors/pink.css",
+        "../node_modules/css/colors/purple.css",
+        "../node_modules/css/colors/sky-blue.css",
+        "../node_modules/css/colors/yellow.css",
+        "../node_modules/css/style.css"
+      ],
+      "scripts": [
+        "../node_modules/js/jquery-2.1.4.min.js",
+        "../node_modules/js/jquery.migrate.js",
+        "../node_modules/js/modernizrr.js",
+        "../node_modules/js/bootstrap.min.js",
+        "../node_modules/js/jquery.fitvids.js",
+        "../node_modules/js/owl.carousel.min.js",
+        "../node_modules/js/nivo-lightbox.min.js",
+        "../node_modules/js/jquery.isotope.min.js",
+        "../node_modules/js/jquery.appear.js",
+        "../node_modules/js/count-to.js",
+        "../node_modules/js/jquery.textillate.js",
+        "../node_modules/js/jquery.lettering.js",
+        "../node_modules/js/jquery.easypiechart.min.js",
+        "../node_modules/js/jquery.nicescroll.min.js",
+        "../node_modules/js/jquery.parallax.js",
+        "../node_modules/js/mediaelement-and-player.js",
+        "../node_modules/js/jquery.slicknav.js",
+        "../node_modules/js/script.js"
+      ],
+      "environments": {
+        "source": "environments/environment.ts",
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+  ],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "css",
+    "prefixInterfaces": false,
+    "inline": {
+      "style": false,
+      "template": false
+    },
+    "spec": {
+      "class": false,
+      "component": true,
+      "directive": true,
+      "module": false,
+      "pipe": true,
+      "service": true
+    }
+  }
+}
