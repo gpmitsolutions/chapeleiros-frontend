@@ -14,7 +14,9 @@
                         <li>
                             <a href="#">
                                 <i class="fa fa-envelope-o"></i> <span class="__cf_email__" data-cfemail="8ee7e0e8e1cef7e1fbfcede1e3feefe0f7a0ede1e3">[contato@clubedoschapeleiros.com.br]</span>
-                                <script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function (t, e, r, n, c, a, p) { try { t = document.currentScript || function () { for (t = document.getElementsByTagName('script'), e = t.length; e--;) if (t[e].getAttribute('data-cfhash')) return t[e] }(); if (t && (c = t.previousSibling)) { p = t.parentNode; if (a = c.getAttribute('data-cfemail')) { for (e = '', r = '0x' + a.substr(0, 2) | 0, n = 2; a.length - n; n += 2) e += '%' + ('0' + ('0x' + a.substr(n, 2) ^ r).toString(16)).slice(-2); p.replaceChild(document.createTextNode(decodeURIComponent(e)), c) } p.removeChild(t) } } catch (u) { } }()/* ]]> */</script>
+                                <script data-cfhash='f9e31' type="text/javascript">
+                                    /* <![CDATA[ */!function (t, e, r, n, c, a, p) { try { t = document.currentScript || function () { for (t = document.getElementsByTagName('script'), e = t.length; e--;) if (t[e].getAt tribute('data-cfhash')) return t[e] } (); if (t && (c = t.previousSibling)) { p = t.parentNode; if (a = c.getAttribute('data-cfemail')) { for (e = '', r = '0x' + a.substr(0, 2) | 0, n = 2; a.length - n; n += 2) e += '%' + ('0' + ('0x' + a.substr(n, 2) ^ r).toString(16)).slice(-2); p.replaceChild(document.createTextNode(decodeURIComponent(e)), c) } p.removeChild(t) } } catch (u) { } } ()/* ]]> */
+                                </script>
                             </a>
                         </li>
                         <li>
@@ -106,7 +108,15 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="contato.html">Cupons de Desconto</a>
+                        <a href="#">Descontos</a>
+                        <ul class="dropdown">
+                            <li>
+                                <a [routerLink]="['../DiscountCoupon/createDiscountCoupon']">Criar Cupom</a></li>
+                            <li>
+                                <a [routerLink]="['../DiscountCoupon/editDiscountCoupon']">Editar Cupom</a></li>
+                            <li>
+                                <a [routerLink]="['../DiscountCoupon/listDiscountCoupon']">Listar Cupom</a></li>
+                        </ul>
                     </li>
                     <li>
                         <a href="#">Regras do Clube</a>
@@ -117,9 +127,9 @@
                             <li>
                                 <a [routerLink]="['../faq/createFaq']">Criar FAQ</a></li>
                             <li>
-                                <a [routerLink]="['../faq/editFaq']">Editar FAQ</a></li>  
+                                <a [routerLink]="['../faq/editFaq']">Editar FAQ</a></li>
                             <li>
-                                <a [routerLink]="['../faq/listFaq']">Listar FAQ</a></li>   
+                                <a [routerLink]="['../faq/listFaq']">Listar FAQ</a></li>
                         </ul>
                     </li>
                     <li>
@@ -128,7 +138,7 @@
                             <li>
                                 <a [routerLink]="['/physicalPersonApp']">Pessoa Física</a></li>
                             <li>
-                                <a [routerLink]="['/legalPerson']">Pessoa Jurídica</a></li>                            
+                                <a [routerLink]="['/legalPerson']">Pessoa Jurídica</a></li>
                         </ul>
                     </li>
                     <li>
@@ -137,9 +147,9 @@
                             <li>
                                 <a [routerLink]="['../Contact/createContact']">Criar Contato</a></li>
                             <li>
-                                <a [routerLink]="['../Contact/editContact']">Editar Contato</a></li>  
+                                <a [routerLink]="['../Contact/editContact']">Editar Contato</a></li>
                             <li>
-                                <a [routerLink]="['../Contact/listContact']">Listar Contato</a></li>                            
+                                <a [routerLink]="['../Contact/listContact']">Listar Contato</a></li>
                         </ul>
                     </li>
                     <li>
@@ -147,7 +157,13 @@
                         <ul class="dropdown">
                             <li>
                                 <a [routerLink]="['/fieldOfBusiness']">Ramo de Atividade</a>
-                            </li>                            
+                            </li>
+                            <li>
+                                <a [routerLink]="['../News/createNews']">Criar Notícia</a></li>
+                            <li>
+                                <a [routerLink]="['../News/editNews']">Editar Notícia</a></li>
+                            <li>
+                                <a [routerLink]="['../News/listNews']">Listar Notícia</a></li>
                         </ul>
                     </li>
                 </ul>

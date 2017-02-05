@@ -18,6 +18,7 @@ export class CreateContactComponent {
 
     private saveNewContact(): void {
         console.log(this.currentContact);
+        
         this.service.post(this.currentContact)
             .subscribe((res) => {
                 if (res.success) {

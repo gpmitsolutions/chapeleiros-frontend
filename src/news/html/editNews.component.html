@@ -1,0 +1,45 @@
+<div class="page-banner" style="padding:40px 0; background: center #f9f9f9;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+				<h2>Admin</h2>
+				<p>Notícia</p>
+            </div>
+            <div class="col-md-6">
+                <ul class="breadcrumbs">
+                    <li>Admin</li>
+                    <li>Notícia</li>
+                    <li><a href="#">Editar Notícia</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h4 class="classic-title"><span>Notícia</span></h4>
+                <div class="form-group">
+                    <label [ngClass]="currentNews.Title ? 'active' : ''" for="title">Título</label>
+                    <input type="text" required value="" id="title" class="form-control" id="basic-url" aria-describedby="basic-addon3" [(ngModel)]="currentNews.Title">                   
+                </div>
+                <div class="form-group">
+                    <label [ngClass]="currentNews.SubTitle ? 'active' : ''" for="subTitle">SubTítulo</label>
+                    <input type="text" required value="" id="subTitle" class="form-control" id="basic-url" aria-describedby="basic-addon3" [(ngModel)]="currentNews.SubTitle">                   
+                </div>
+                <div class="form-group">
+                    <label [ngClass]="currentNews.ImageUrl ? 'active' : ''" for="imageUrl">Imagem</label>
+                    <input type="text" required value="" id="imageUrl" class="form-control" id="basic-url" aria-describedby="basic-addon3" [(ngModel)]="currentNews.ImageUrl">                   
+                </div>
+                <div class="form-group">
+                    <label [ngClass]="currentNews.NewsText ? 'active' : ''" for="newsTexto">Texto</label>
+                    <textarea rows="20" value="message" id="newsTexto" class="form-control" id="basic-url" aria-describedby="basic-addon3" [(ngModel)]="currentNews.NewsText"></textarea>                  
+                </div>
+                <div class="input-field col s12">
+                    <a href="#" class="btn-system btn-small btn-black" (click)="updateNewNews()">Enviar</a>                   
+                </div> 
+            </div>
+        </div>
+    </div>
+</div> 

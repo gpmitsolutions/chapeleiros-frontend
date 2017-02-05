@@ -8,8 +8,10 @@ import { LegalPersonModule } from 'legalPerson/legalPerson.module';
 import { FieldOfBusinessModule } from 'FieldOfBusiness/fieldOfBusiness.module';
 import { PolicyPrivacyModule } from 'PolicyPrivacy/PolicyPrivacy.module';
 import { ContactModule } from 'contact/contact.module';
+import { DiscountCouponModule } from 'DiscountCoupon/DiscountCoupon.module';
 import { CityModule } from 'city/city.module';
 import { FaqModule } from 'faq/faq.module';
+import { NewsModule } from 'News/News.module';
 import { StateModule } from 'state/state.module';
 import { rootRouterConfig } from './app.routes';
 
@@ -28,7 +30,9 @@ import { AppComponent } from './app.component';
     LegalPersonModule,
     FieldOfBusinessModule,
     ContactModule,
+    DiscountCouponModule,
     CityModule,
+    NewsModule,
     StateModule,
     FaqModule,
     RouterModule.forRoot(rootRouterConfig, { useHash: true })

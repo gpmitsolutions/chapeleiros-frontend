@@ -1,0 +1,65 @@
+<div class="page-banner" style="padding:40px 0; background: center #f9f9f9;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+				<h2>Cupons de Desconto</h2>
+				<p>Cupons de Desconto</p>
+            </div>
+            <div class="col-md-6">
+                <ul class="breadcrumbs">
+                    <li>Inicial</li>
+                    <li>Cupons de Desconto</li>
+                    <li><a href="#">Criar Cupom de Desconto</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h4 class="classic-title"><span>Cupom de Desconto</span></h4>
+                <div class="form-group">
+                    <label [ngClass]="currentDiscountCoupon.LegalPersonID ? 'active' : ''" for="legalPersonID">Empresa</label>
+                    <input type="text" required value="" id="legalPersonID" class="form-control" id="basic-url" aria-describedby="basic-addon3" [(ngModel)]="currentDiscountCoupon.LegalPersonID">                   
+                </div>
+                <div class="form-group">
+                    <label [ngClass]="currentDiscountCoupon.Descricao ? 'active' : ''" for="descricao">Descrição</label>
+                    <textarea rows="7" type="text" required value="" id="descricao" class="form-control" id="basic-url" aria-describedby="basic-addon3" [(ngModel)]="currentDiscountCoupon.Descricao"></textarea>                
+                </div>
+                <div class="form-group">
+                    <label [ngClass]="currentDiscountCoupon.Inicio ? 'active' : ''" for="inicio">Data de Início</label>
+                    <input type="text" required value="" id="inicio" class="form-control" id="basic-url" aria-describedby="basic-addon3" [(ngModel)]="currentDiscountCoupon.Inicio">                   
+                </div>
+                <div class="form-group">
+                    <label [ngClass]="currentDiscountCoupon.Fim ? 'active' : ''" for="fim">Data de Fim</label>
+                    <input type="text" required value="" id="fim" class="form-control" id="basic-url" aria-describedby="basic-addon3" [(ngModel)]="currentDiscountCoupon.Fim">                                    
+                </div>
+                <div class="form-group">
+                    <label [ngClass]="currentDiscountCoupon.TipoDeDesconto ? 'active' : ''" for="tipoDeDesconto">Tipo de Desconto</label>
+                    <input type="text" required value="" id="tipoDeDesconto" class="form-control" id="basic-url" aria-describedby="basic-addon3" [(ngModel)]="currentDiscountCoupon.TipoDeDesconto">                                    
+                </div>
+                <div class="form-group">
+                    <label [ngClass]="currentDiscountCoupon.ValorAntigo ? 'active' : ''" for="valorAntigo">Valor Antigo</label>
+                    <input type="text" required value="" id="valorAntigo" class="form-control" id="basic-url" aria-describedby="basic-addon3" [(ngModel)]="currentDiscountCoupon.ValorAntigo">                                    
+                </div>
+                <div class="form-group">
+                    <label [ngClass]="currentDiscountCoupon.ValorNovo ? 'active' : ''" for="valorNovo">Valor Novo</label>
+                    <input type="text" required value="" id="valorNovo" class="form-control" id="basic-url" aria-describedby="basic-addon3" [(ngModel)]="currentDiscountCoupon.ValorNovo">                                    
+                </div>
+                <div class="form-group">
+                    <label [ngClass]="currentDiscountCoupon.CaminhoImagem ? 'active' : ''" for="caminhoImagem">Imagem</label>
+                    <input type="text" required value="" id="caminhoImagem" class="form-control" id="basic-url" aria-describedby="basic-addon3" [(ngModel)]="currentDiscountCoupon.CaminhoImagem">                                    
+                </div>
+                <div class="form-group">
+                    <label [ngClass]="currentDiscountCoupon.RegrasDeUso ? 'active' : ''" for="regrasDeUso">Regras de Uso</label>
+                    <textarea rows="7" type="text" required value="" id="regrasDeUso" class="form-control" id="basic-url" aria-describedby="basic-addon3" [(ngModel)]="currentDiscountCoupon.RegrasDeUso"></textarea>                              
+                </div>
+                <div class="input-field col s12">
+                    <a href="#" class="btn-system btn-small btn-black" (click)="saveNewDiscountCoupon()">Enviar</a>                   
+                </div> 
+            </div>
+        </div>
+    </div>
+</div> 
